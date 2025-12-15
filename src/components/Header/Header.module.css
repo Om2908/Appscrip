@@ -1,0 +1,238 @@
+.topBar {
+  background-color: #000;
+  color: #fff;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 12px;
+}
+
+.topBarItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ff6b9d;
+}
+
+.desktopOnly {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .desktopOnly {
+    display: none;
+  }
+}
+
+.gridIcon {
+  flex-shrink: 0;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  position: relative;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.logoTextCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  flex: 1;
+}
+
+.logoTextCenter span {
+  font-weight: 700;
+  font-size: 32px;
+  color: #000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.utilityIcons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.iconButton:hover {
+  opacity: 0.7;
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.navBar {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 15px 5%;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navBar a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.navBar a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .navBar {
+    gap: 30px;
+  }
+  
+  .navBar a {
+    font-size: 12px;
+  }
+  
+  .logoTextCenter span {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topBar {
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .topBarItem {
+    font-size: 10px;
+  }
+  
+  .header {
+    padding: 15px 3%;
+    flex-wrap: wrap;
+  }
+  
+  .logoTextCenter {
+    position: static;
+    transform: none;
+    order: 2;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .utilityIcons {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .navBar {
+    padding: 12px 3%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .navBar a {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topBar {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .navBar {
+    gap: 10px;
+  }
+  
+  .navBar a {
+    font-size: 10px;
+  }
+  
+  .logoTextCenter span {
+    font-size: 24px;
+  }
+  
+  .utilityIcons {
+    gap: 15px;
+  }
+  
+  .languageSelector {
+    font-size: 12px;
+  }
+}
+
+/* Hide hamburger on desktop */
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .mobileMenuButton {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    z-index: 2000;
+  }
+
+  /* Hide main nav on mobile */
+  .navBar {
+    display: none;
+  }
+}
+

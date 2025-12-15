@@ -1,0 +1,52 @@
+.hero {
+  padding: 60px 5%;
+  text-align: center;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 3%;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 3%;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .description {
+    font-size: 13px;
+  }
+}
+
