@@ -1,12 +1,27 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 import FilterSidebarClient from '../FilterSidebar/FilterSidebarClient';
 import ProductGridClient from '../ProductGrid/ProductGridClient';
 import styles from './ProductListing.module.css';
 
 export default function ProductListing({ products, totalItems }) {
   const [filterOpen, setFilterOpen] = useState(false);
+
+  // Keep filter visible by default on desktop, closed on mobile.
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 769) {
+        setFilterOpen(true);
+      } else {
+        setFilterOpen(false);
+      }
+    };
+
+    handleResize(); // set initial state based on current width
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleFilter = () => {
     setFilterOpen(!filterOpen);

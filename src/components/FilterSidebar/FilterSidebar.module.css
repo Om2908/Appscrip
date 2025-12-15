@@ -126,14 +126,16 @@
 /* Desktop - sidebar always visible */
 @media (min-width: 769px) {
   .sidebar {
-    transform: translateX(0);
     position: sticky;
     height: calc(100vh - 300px);
   }
-  
-  .sidebar.open,
+
+  .sidebar.open {
+    display: block;
+  }
+
   .sidebar.closed {
-    transform: translateX(0);
+    display: none;
   }
 }
 
@@ -145,7 +147,8 @@
     top: 0;
     height: 100vh;
     z-index: 1000;
-    width: 280px;
+    width: 80vw;
+    max-width: 320px;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     transform: translateX(-100%);
   }

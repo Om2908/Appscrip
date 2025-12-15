@@ -195,11 +195,13 @@
   .productSection {
     padding: 20px 15px;
   }
-  
+
   .controls {
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
+    padding: 10px 0;
   }
   
   .itemCount {
@@ -214,7 +216,7 @@
   
   .sortSelect {
     font-size: 12px;
-    padding: 6px 30px 6px 12px;
+    padding: 4px 24px 4px 10px;
   }
   
   .grid {
@@ -232,13 +234,21 @@
 }
 
 @media (max-width: 480px) {
+  .productSection {
+    padding: 16px 8px;
+  }
+
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 12px;
   }
   
-  .itemCount {
+  .productTitle {
     font-size: 12px;
+  }
+
+  .pricingText {
+    font-size: 11px;
   }
 }
 
