@@ -28,6 +28,8 @@ async function getProducts() {
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
+      console.log("product data::",response);
+      
 
       const products = await response.json();
       
